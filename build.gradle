@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.fullidle.backtip.backtip.Main'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {url 'https://raw.github.com/FullIdle/maven-repository/main/'}
+    maven {url 'https://repo.extendedclip.com/content/repositories/placeholderapi/'}
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot:1.12.2-R0.1-SNAPSHOT'
+    compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
+
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
+
+processResources {
+    setFilteringCharset("UTF-8")
+    expand project.properties
+}

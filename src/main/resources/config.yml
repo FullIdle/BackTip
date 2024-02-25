@@ -1,0 +1,14 @@
+##那些事件会触发插件的提示
+##https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player 可以前往javadoc找你需要的感觉没有太大必要呢
+listeners:
+  - 'org.bukkit.event.player.PlayerRespawnEvent'
+##发送给玩家的信息格式
+backMsg:
+##虽然女不兴骚,但是我提倡那女平等,不过我男的所以放年放前面哈,女腐竹自己改
+##{button}变量就是按钮了
+  text: '&3需要返回上一个位置么?骚[年/女]{button}'
+  button:
+    text: '&b[&k!&r&b返回&k!&r&b]'
+    hover:
+      enable: true
+      text: '&a点击我返回'

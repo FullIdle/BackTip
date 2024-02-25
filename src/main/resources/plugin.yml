@@ -1,0 +1,8 @@
+name: ${rootProject.name}
+main: ${group}
+version: ${version}
+author: FullIdle
+commands:
+  backtip:
+    description: reload command
+
